@@ -13,6 +13,11 @@
     <packaging>jar</packaging>
 
     <dependencies>
+        <!--Redis cache -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
         <!-- shiro权限控制框架 -->
         <dependency>
             <groupId>org.apache.shiro</groupId>
@@ -84,6 +89,16 @@
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
             <version>20180130</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>RELEASE</version>
         </dependency>
         <!-- API Swagger end -->
     </dependencies>

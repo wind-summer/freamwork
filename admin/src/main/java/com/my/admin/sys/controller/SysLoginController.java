@@ -14,6 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -42,6 +43,8 @@ public class SysLoginController {
     private final SysUserService sysUserService;
 
     private final SysUserTokenService sysUserTokenService;
+
+    private final ValueOperations<String,String> valueOperations;
 
     @ApiOperation("获取验证码图片-接口")
     @GetMapping("captcha.jpg")
