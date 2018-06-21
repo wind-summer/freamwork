@@ -59,8 +59,8 @@ public class Swagger2 {
      */
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("****-**系统接口文档")
-                .description("**-server系统接口文档")
+                .title("快速开发系统接口文档")
+                .description("快速-server系统接口文档")
                 .license("Apache license")
                 .version("2.0")
                 .build();
