@@ -7,13 +7,15 @@ import com.my.core.sys.entity.SysUser;
 import com.my.core.sys.service.SysUserService;
 import com.my.core.sys.service.SysUserTokenService;
 import com.my.core.utils.ShiroUtils;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.IOUtils;
 import org.apache.shiro.crypto.hash.Sha256Hash;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
@@ -31,6 +33,7 @@ import java.io.IOException;
 @Slf4j
 @AllArgsConstructor
 @RestController
+@Api("admin登录api")
 public class SysLoginController {
 
     @Autowired
@@ -40,7 +43,8 @@ public class SysLoginController {
 
     private final SysUserTokenService sysUserTokenService;
 
-    @RequestMapping("captcha.jpg")
+    @ApiOperation("获取验证码图片-接口")
+    @GetMapping("captcha.jpg")
     public void captcha(HttpServletResponse response,HttpServletRequest request) throws ServletException,IOException {
         response.setHeader("Cache-Control", "no-store, no-cache");
         response.setContentType("image/jpeg");
@@ -64,6 +68,7 @@ public class SysLoginController {
      * @param captcha
      * @return
      */
+    @ApiOperation("登录-接口")
     @PostMapping("/sys/login")
     public ApiResult login(String username, String password, String captcha) throws IOException{
         /*String kaptcha = ShiroUtils.getKaptcha(Constants.KAPTCHA_SESSION_KEY);

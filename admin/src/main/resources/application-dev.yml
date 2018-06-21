@@ -61,3 +61,25 @@ spring:
                     wall:
                         config:
                           multi-statement-allow: true
+#应用自定义配置
+application:
+    #权限安全配置
+    security:
+         # Token 有效时间，单位秒
+         tokenExpire: 120
+         # 客户默认初始密码
+         defaultPassword: 123456
+         # 营销中心业务员角色id
+         roleId: 32
+         # 营销中心部门id
+         deptId: 6
+         # 默认管理员id,多个用逗号分隔
+         adminIds: 1
+
+#热部署配置
+devtools:
+    livereload:
+      enabled: true
+    restart:
+        enabled: true
+        additional-exclude: views/**
