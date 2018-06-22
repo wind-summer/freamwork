@@ -17,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.imageio.ImageIO;
@@ -34,7 +35,7 @@ import java.io.IOException;
 @Slf4j
 @AllArgsConstructor
 @RestController
-@Api("admin登录api")
+@Api(description = "登陆管理api")
 public class SysLoginController {
 
     @Autowired
@@ -46,7 +47,7 @@ public class SysLoginController {
 
     private final ValueOperations<String,String> valueOperations;
 
-    @ApiOperation("获取验证码图片-接口")
+    @ApiOperation(value = "获取验证码图片-接口")
     @GetMapping("captcha.jpg")
     public void captcha(HttpServletResponse response,HttpServletRequest request) throws ServletException,IOException {
         response.setHeader("Cache-Control", "no-store, no-cache");

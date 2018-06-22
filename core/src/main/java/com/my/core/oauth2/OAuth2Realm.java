@@ -1,5 +1,6 @@
 package com.my.core.oauth2;
 
+import com.my.common.utils.SpringContextUtils;
 import com.my.core.sys.entity.SysUser;
 import com.my.core.sys.entity.SysUserToken;
 import com.my.core.sys.service.ShiroService;
@@ -50,6 +51,12 @@ public class OAuth2Realm extends AuthorizingRealm {
      */
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
+        /*String profiles = SpringContextUtils.applicationContext.getEnvironment().getActiveProfiles()[0];
+        //如果是开发环境不验证，方便测试
+        if(profiles!=null && "dev".equals(profiles)){
+            return new SimpleAuthenticationInfo();
+        }*/
+
         String accessToken = (String) token.getPrincipal();
 
         //根据accessToken，查询用户信息

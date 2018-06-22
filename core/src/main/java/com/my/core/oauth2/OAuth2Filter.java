@@ -2,10 +2,14 @@ package com.my.core.oauth2;
 
 import com.google.gson.Gson;
 import com.my.common.utils.ApiResult;
+import com.my.core.config.ApplicationProperties;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.web.filter.authc.AuthenticatingFilter;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Component;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -17,7 +21,12 @@ import java.io.IOException;
  * @author wenlf
  * @since 2018/4/26
  */
+@Component
 public class OAuth2Filter extends AuthenticatingFilter {
+
+    @Autowired
+    private ApplicationProperties applicationProperties;
+
     @Override
     protected AuthenticationToken createToken(ServletRequest request, ServletResponse response) throws Exception {
         //获取请求token
@@ -41,7 +50,7 @@ public class OAuth2Filter extends AuthenticatingFilter {
         String token = getRequestToken((HttpServletRequest) request);
         if(StringUtils.isBlank(token)){
             HttpServletResponse httpResponse = (HttpServletResponse) response;
-            String json = new Gson().toJson(ApiResult.error(500, "invalid token"));
+            String json = new Gson().toJson(ApiResult.error(HttpStatus.UNAUTHORIZED.value(), "invalid token"));
             httpResponse.getWriter().print(json);
 
             return false;

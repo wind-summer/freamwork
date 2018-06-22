@@ -16,8 +16,8 @@ import lombok.experimental.Accessors;
  * @since 2018-04-24
  */
 @Data
-@EqualsAndHashCode(callSuper = true)
 @Accessors(chain = true)
+@EqualsAndHashCode(callSuper = true)
 @TableName("my_demo")
 public class Demo extends BaseEntity<Demo> {
 
