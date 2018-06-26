@@ -70,7 +70,6 @@ public class SysUserTokenServiceImpl extends ServiceImpl<SysUserTokenDao, SysUse
 			//更新token
 			sysUserTokenDao.updateById(tokenEntity);
 		}
-		log.warn("hello-测试语句");
 		ApiResult r = ApiResult.ok().put("token", token).put("expire", applicationProperties.getSecurity().getTokenExpire());
 		return r;
 	}

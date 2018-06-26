@@ -35,7 +35,7 @@
 	</select>
 	
 	<select id="queryList" resultType="SysUser">
-		select u.*, (select d.name from sys_dept d where d.dept_id = u.dept_id) deptName from sys_user u
+		select u.*, (select d.name from sys_dept d where d.id = u.dept_id) deptName from sys_user u
 		<where>
 			<if test="username != null and username.trim() != ''">
 				and u.`username` like concat('%',#{username},'%')

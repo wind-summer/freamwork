@@ -14,7 +14,7 @@ spring:
         active: dev
     # 指定静态资源的路径
     resources:
-        static-locations: classpath:/static/,classpath:/views/
+        static-locations: classpath:/static/,classpath:/views/,classpath:/views/*/
     redis:
         # REDIS (RedisProperties)
         # Redis数据库索引（默认为0）
@@ -72,6 +72,20 @@ mybatis-plus:
 application:
     bidding:
         maxAmount: 3000
+    swagger:
+        title: spring boot快速开发平台api-后台
+        description: API是一个基于Rest规范的开发API平台,响应数据统一格式：其中code等于0成功，非0错误，错误信息见msg。{"code":0,"msg":"string","data":{}}
+        license: Apache license
+        version: 1.0
+    # By default CORS is disabled. Uncomment to enable.
+    cors:
+         allowed-origins: "*"
+         allowed-methods: "*"
+         allowed-headers: "*"
+         exposed-headers: "token"
+         allow-credentials: true
+         max-age: 1800
+
 
 
 

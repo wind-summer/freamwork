@@ -4,6 +4,7 @@ import lombok.Data;
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.cors.CorsConfiguration;
 
 import java.util.List;
 
@@ -18,6 +19,10 @@ public class ApplicationProperties {
     private final Bidding bidding = new Bidding();
 
     private final Security security = new Security();
+
+    private final Swagger swagger = new Swagger();
+
+    private final CorsConfiguration cors = new CorsConfiguration();
 
     @Data
     public static class Bidding {
@@ -50,6 +55,26 @@ public class ApplicationProperties {
          * 密码错误次数
          */
         private int errorNum;
+    }
+
+    @Data
+    public static class Swagger {
+        /**
+         * 标题
+         */
+        private String title;
+        /**
+         * 描述
+         */
+        private String description;
+        /**
+         * license
+         */
+        private String license;
+        /**
+         * 版本
+         */
+        private String version;
     }
 
 }
