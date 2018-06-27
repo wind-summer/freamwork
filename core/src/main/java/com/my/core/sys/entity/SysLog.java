@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * 系统日志
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 @TableName("sys_log")

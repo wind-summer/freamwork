@@ -11,7 +11,7 @@ import com.my.core.sys.entity.SysLog;
  * 系统日志 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysLogService extends IService<SysLog> {

@@ -12,7 +12,7 @@ import com.my.core.sys.entity.SysRole;
  * 角色 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysRoleService extends IService<SysRole> {

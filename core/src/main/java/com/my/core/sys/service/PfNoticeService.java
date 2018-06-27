@@ -11,7 +11,7 @@ import com.my.core.sys.entity.PfNotice;
  *  服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-12-18
  */
 public interface PfNoticeService extends IService<PfNotice> {

@@ -13,7 +13,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * 用户与角色对应关系
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 @TableName("sys_user_role")

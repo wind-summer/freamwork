@@ -11,7 +11,7 @@ import com.my.core.sys.entity.SysRoleMenu;
   * 角色与菜单对应关系 Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysRoleMenuDao extends BaseMapper<SysRoleMenu> {

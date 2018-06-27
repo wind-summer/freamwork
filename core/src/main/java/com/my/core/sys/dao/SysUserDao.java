@@ -13,7 +13,7 @@ import com.my.core.sys.entity.SysUser;
   * 系统用户 Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysUserDao extends BaseMapper<SysUser> {

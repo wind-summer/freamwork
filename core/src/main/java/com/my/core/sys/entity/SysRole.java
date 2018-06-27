@@ -20,7 +20,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * 角色
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 @TableName("sys_role")

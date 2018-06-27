@@ -10,7 +10,7 @@ import com.my.core.sys.entity.SysRoleDept;
  * 角色与部门对应关系 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysRoleDeptService extends IService<SysRoleDept> {

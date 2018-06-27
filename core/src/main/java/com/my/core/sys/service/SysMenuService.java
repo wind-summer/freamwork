@@ -11,7 +11,7 @@ import com.my.core.sys.entity.SysMenu;
  * 菜单管理 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysMenuService extends IService<SysMenu> {

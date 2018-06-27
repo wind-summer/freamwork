@@ -13,7 +13,7 @@ import com.baomidou.mybatisplus.annotations.TableName;
  * 角色与菜单对应关系
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 @TableName("sys_role_menu")

@@ -24,7 +24,7 @@ import org.springframework.transaction.annotation.Transactional;
  * 系统用户 服务实现类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 @Service

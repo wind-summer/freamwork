@@ -10,7 +10,7 @@ import com.my.core.sys.entity.SysUserRole;
  * 用户与角色对应关系 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysUserRoleService extends IService<SysUserRole> {

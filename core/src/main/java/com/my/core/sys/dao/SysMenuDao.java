@@ -12,7 +12,7 @@ import java.util.Map;
   * 菜单管理 Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysMenuDao extends BaseMapper<SysMenu> {

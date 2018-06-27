@@ -13,7 +13,7 @@ import com.my.core.sys.entity.SysRole;
   * 角色 Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysRoleDao extends BaseMapper<SysRole> {

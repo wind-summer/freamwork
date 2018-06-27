@@ -12,7 +12,7 @@ import com.my.core.sys.entity.PfNotice;
   *  Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-12-18
  */
 public interface PfNoticeDao extends BaseMapper<PfNotice> {

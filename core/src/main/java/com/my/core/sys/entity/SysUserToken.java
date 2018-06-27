@@ -14,7 +14,7 @@ import com.baomidou.mybatisplus.enums.IdType;
  * 系统用户Token
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 @TableName("sys_user_token")

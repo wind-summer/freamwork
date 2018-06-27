@@ -11,7 +11,7 @@ import com.my.core.sys.entity.SysDept;
  * 部门管理 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysDeptService extends IService<SysDept> {

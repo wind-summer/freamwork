@@ -10,7 +10,7 @@ import com.my.core.sys.entity.SysRoleMenu;
  * 角色与菜单对应关系 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysRoleMenuService extends IService<SysRoleMenu> {

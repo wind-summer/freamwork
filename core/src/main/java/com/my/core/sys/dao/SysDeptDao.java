@@ -11,7 +11,7 @@ import java.util.Map;
   * 部门管理 Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysDeptDao extends BaseMapper<SysDept> {

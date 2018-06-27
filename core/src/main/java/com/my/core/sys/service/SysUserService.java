@@ -12,7 +12,7 @@ import com.my.core.sys.entity.SysUser;
  * 系统用户 服务类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysUserService extends IService<SysUser> {

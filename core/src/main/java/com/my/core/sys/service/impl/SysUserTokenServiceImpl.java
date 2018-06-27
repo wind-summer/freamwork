@@ -20,7 +20,7 @@ import org.springframework.stereotype.Service;
  * 系统用户Token 服务实现类
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 

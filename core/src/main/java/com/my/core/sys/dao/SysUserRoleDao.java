@@ -11,7 +11,7 @@ import com.my.core.sys.entity.SysUserRole;
   * 用户与角色对应关系 Mapper 接口
  * </p>
  *
- * @author theodo
+ * @author wenlf
  * @since 2017-10-28
  */
 public interface SysUserRoleDao extends BaseMapper<SysUserRole> {
