@@ -1,6 +1,5 @@
 package com.my.core.oauth2;
 
-import com.my.common.utils.SpringContextUtils;
 import com.my.core.sys.entity.SysUser;
 import com.my.core.sys.entity.SysUserToken;
 import com.my.core.sys.service.ShiroService;

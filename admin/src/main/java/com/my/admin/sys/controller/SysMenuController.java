@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -35,7 +36,7 @@ public class SysMenuController extends AbstractController {
     /**
      * 导航菜单
      */
-    @RequestMapping("/nav")
+    @GetMapping("/nav")
     public ApiResult nav(){
         List<SysMenu> menuList = sysMenuService.getUserMenuList(getUserId());
         Set<String> permissions = shiroService.getUserPermissions(getUserId());
@@ -45,7 +46,7 @@ public class SysMenuController extends AbstractController {
     /**
      * 所有菜单列表
      */
-    @RequestMapping("/list")
+    @GetMapping("/list")
     @RequiresPermissions("sys:menu:list")
     public List<SysMenu> list(){
         List<SysMenu> menuList = sysMenuService.queryList(new HashMap<>());

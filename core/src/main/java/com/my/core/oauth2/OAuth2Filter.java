@@ -66,7 +66,7 @@ public class OAuth2Filter extends AuthenticatingFilter {
         try {
             //处理登录失败的异常
             Throwable throwable = e.getCause() == null ? e : e.getCause();
-            ApiResult r = ApiResult.error(500, throwable.getMessage());
+            ApiResult r = ApiResult.error(HttpStatus.UNAUTHORIZED.value(), throwable.getMessage());
 
             String json = new Gson().toJson(r);
             httpResponse.getWriter().print(json);

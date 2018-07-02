@@ -1,5 +1,6 @@
 package com.my.core.sys.service.impl;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 
 import java.util.ArrayList;
@@ -68,6 +69,7 @@ public class SysMenuServiceImpl extends ServiceImpl<SysMenuDao, SysMenu> impleme
 		
 		//用户菜单列表
 		List<Long> menuIdList = sysUserService.queryAllMenuId(userId);
+		this.selectList(new EntityWrapper<SysMenu>().in("parent_id",menuIdList));
 		return getAllMenuList(menuIdList);
 	}
 	
